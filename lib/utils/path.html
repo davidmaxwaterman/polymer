@@ -237,7 +237,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
      */
     set: function(root, path, value) {
       let prop = root;
-      let parts = this.split(path);
+      let parts = (path instanceof Array)?path:this.split(path);
       let last = parts[parts.length-1];
       if (parts.length > 1) {
         // Loop over path parts[0..n-2] and dereference
